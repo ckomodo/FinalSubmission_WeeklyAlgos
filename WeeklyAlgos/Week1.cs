@@ -14,13 +14,11 @@ namespace WeeklyAlgos
         */
         public static int EasyAlgo(string candidate)
         {
-
             int count = 0;
-
+             
             //Add your code here.
             char letterR = 'R';
             char smallLetterR = 'r';
-
 
             //organise sentence to individual characters
             //then count the number of occurences of character 'R'
@@ -79,25 +77,36 @@ namespace WeeklyAlgos
 
             //Add your code here.
 
-            for (int i = 0; i < stringOne.Length; i--)
+            //for (int i = 0; i < stringOne.Length; i--)
+            //{
+            //    for (int j = 0; j < stringTwo.Length; j--)
+            //    {
+
+
+            //        //my idea was to split each string into an array of characters
+            //        //then make comparison of the characters in the if statement
+
+            //        char newString1 = Convert.ToChar(stringOne[i]);
+            //        char newString2 = Convert.ToChar(stringTwo[j]);
+            //        if (newString1 == newString2)
+            //        {
+            //            //if the characters in both strings match then just pick from one of them
+
+            //             commonEnding = commonEnding + newString1;
+
+            //        }
+            //    }
+            //}
+
+            //joshua's code
+            for (int i = 0; i < stringOne.Length; i++)
             {
-                for (int j = 0; j < stringTwo.Length; j--)
+                String Match = stringOne.Substring(i);
+                if (stringTwo.EndsWith(Match))
                 {
-
-                    
-                    //my idea was to split each string into an array of characters
-                    //then make comparison of the characters in the if statement
-
-                    char newString1 = Convert.ToChar(stringOne[i]);
-                    char newString2 = Convert.ToChar(stringTwo[j]);
-                    if (newString1 == newString2)
-                    {
-                        //if the characters in both strings match then just pick from one of them
-
-                         commonEnding = commonEnding + newString1;
-
-                    }
+                    return Match;
                 }
+
             }
 
             return commonEnding;

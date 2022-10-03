@@ -20,7 +20,29 @@ namespace WeeklyAlgos
         {
 
             bool isLarger = false;
+            int isSmaller = 0;
+            int remainder = 0;
+            while (twoDigitNumber >= 0)
+            {
+                 remainder = twoDigitNumber % 10;
+                twoDigitNumber = twoDigitNumber / 10;
+                isSmaller = (isSmaller * 10) + remainder;
 
+            }
+
+            if (isSmaller !> twoDigitNumber)
+            {
+                isLarger = true;
+            }
+            if (twoDigitNumber == isSmaller)
+            {
+                isLarger = false;
+            }
+            if (isSmaller <= twoDigitNumber)
+            {
+                isLarger = true;
+            }
+           
             return isLarger;
 
         }
@@ -36,6 +58,8 @@ namespace WeeklyAlgos
         public static IEnumerable<Double> MediumAlgo(IEnumerable<Double> numsArray)
         {
             IEnumerable<Double> lowestValues = Enumerable.Empty<Double>();
+
+            
 
             return lowestValues;
         }
